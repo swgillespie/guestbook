@@ -4,7 +4,11 @@ SONGS_SVG := $(SONGS:.ly=.svg)
 .PHONY: all
 default: all
 
-%.svg: %.ly
-	lilypond -dbackend=svg $< -o $@
+%.svg %.midi: %.ly
+	lilypond -dbackend=svg -o $(basename $@) $<
 
 all: $(SONGS_SVG)
+
+clean:
+	rm -f *.svg
+	rm -f *.midi

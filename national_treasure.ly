@@ -1,8 +1,12 @@
 \version "2.19.82"
+\header {
+  title = "National Treasure Theme"
+  composer = "Trevor Rabin"
+}
+
 \score {
-  \midi {
-    \tempo 4 = 120
-  }
+  \midi { \tempo 4 = 120 }
+  \layout {}
   \relative c'' {
     \numericTimeSignature
     \time 4/4
