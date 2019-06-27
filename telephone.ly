@@ -9,7 +9,7 @@
   \layout {
     \context {
       \Score
-      \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/32)
+      \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/16)
     }
   }
 
@@ -20,7 +20,9 @@
     \clef treble
     \key f \minor
 
-    c4 c8 c bes4 bes8 bes aes aes aes aes g ees c f~
+    \set fontSize = #4
+    c4 c8 c bes4 bes8 bes |
+    aes aes aes aes g ees c f~ |
 
     %f8 c' c c bes4 bes8 bes aes aes aes g4 f4.
   }
