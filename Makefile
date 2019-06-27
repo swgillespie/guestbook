@@ -1,4 +1,4 @@
-SONGS := national_treasure.ly
+SONGS := $(wildcard *.ly)
 SONGS_SVG := $(SONGS:.ly=.svg)
 
 .PHONY: all

@@ -13,7 +13,7 @@
     \clef treble
     \key d \minor
 
-    d,1 f2 g a g~ g2.~g8 bes16 a
+    d,1 f2 g a g~ g2.~ g8 bes16 a
  
     g1 bes2 c d c~ c1
   }
