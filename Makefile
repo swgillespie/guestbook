@@ -1,4 +1,4 @@
-SONGS := $(wildcard *.ly)
+SONGS := guestbook.ly
 SONGS_SVG := $(SONGS:.ly=.svg)
 
 .PHONY: all
