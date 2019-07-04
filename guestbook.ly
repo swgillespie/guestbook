@@ -24,21 +24,27 @@
   %% Draw each song's bar the full width of the page, even if there aren't
   %% enough notes to do so at lilypond's desired spacing.
   ragged-right = ##f
-
-  %% Begin drawing at x-coordinate 0.
-  %left-margin = #0
 }
 
-%% Lilypond embeds a Scheme interpreter, so these few lines issues a few commands
-%% in Scheme that we'll use later on. Here, we are defining variables that we will
-%% use later. In Lilypond, the '#' sigil escapes to Scheme mode and yields the value
-%% of the evaluated Scheme expression.
+%% Lilypond embeds a Scheme interpreter, so these few lines issues a few
+%% commands in Scheme that we'll use later on. Here, we are defining variables
+%% that we will use later. In Lilypond, the '#' sigil escapes to Scheme mode
+%% and yields the value of the evaluated Scheme expression.
 %%
-%% We've actually already seen this notation already: ##f evaluates the Scheme value
-%% "#f" (false), and #0 evaluates the Scheme value 0 (0).
+%% We've actually already seen this notation already: ##f evaluates the Scheme
+%% value "#f" (false), and #0 evaluates the Scheme value 0 (0).
+
+%% Scale up the note sizes to 14. The goal here is to make the notes large
+%% enough that people can put their fingers in them.
 #(define note-size 14)
+
+%% Scale the staff up to accomodate the larger notes.
 #(define staff-scale 3)
+
+%% Don't indent the scores at all.
 #(define indent 0)
+
+%% Don't print measure numbers at all.
 #(define break-visibility #(#f #f #f))
 
 %%
@@ -72,7 +78,7 @@
       g2.~ g8 bes16 a | \break
       g1 |
       bes2 c d c~  |
-      c1
+      c1 \bar "|."
     }
   }
 }
@@ -105,7 +111,7 @@
       \key f \minor
 
       c4 c8 c bes4 bes8 bes |
-      aes aes aes aes g ees c f~ |
+      aes aes aes aes g ees c f~ \bar "|." |
     }
 
     \addlyrics {
@@ -147,7 +153,7 @@
       bes2 ees,4 ees |
       f4. c4. c4 |
       g'4. ees4. ees4 |
-      f1
+      f1 \bar "|."
   }
 
     \addlyrics {
@@ -185,7 +191,7 @@
       f8. des16 aes2 bes4 |
       c2. des4 |
       ees8. f16 ges2 f4 |
-      f1
+      f1 \bar "|."
     }
   }
 }
@@ -219,7 +225,7 @@
       %d'2. d,8 g |
 
       d,8[ g d'] d,[ g d'] d,[ g] |
-      d'1 |
+      d'1 \bar "|." |
 
       %{
       d,8[ g d'] d,[ g d'] d,[ g] |
