@@ -149,7 +149,7 @@
       \clef treble
       \key ees \major
 
-      r2 r4 c |
+      r2. c4 |
       bes2 ees,4 ees |
       f4. c4. c4 |
       g'4. ees4. ees4 |
@@ -257,23 +257,55 @@
     }
     \relative c'' {
       \magnifyStaff #staff-scale
-        \set fontSize = #note-size
-        \override Score.BarNumber.break-visibility = #break-visibility
+      \set fontSize = #note-size
+      \override Score.BarNumber.break-visibility = #break-visibility
 
-        \numericTimeSignature
-        \time 4/4
-        \clef treble
-        \key b \minor
+      \numericTimeSignature
+      \time 4/4
+      \clef treble
+      \key b \minor
 
-        %b4. e,4. f4 |
-        %d8 e4 f4 ges,8 a bes |
-        %b4. des4. d4 |
-        %b8 des4 d2~ d8 |
+      %b4. e,4. f4 |
+      %d8 e4 f4 ges,8 a bes |
+      %b4. des4. d4 |
+      %b8 des4 d2~ d8 |
 
-        b8 r4 e,8 r4 f8 r |
-        d e r f r ges, a bes |
-        b r4 des8 r4 d8 r |
-        b des r d2~ d8 \bar "|." |
+      b8 r4 e,8 r4 f8 r |
+      d e r f r ges, a bes |
+      b r4 des8 r4 d8 r |
+      b des r d2~ d8 \bar "|." |
     }
   }
+}
+
+\book {
+  \bookOutputName "force_theme"
+  \header {
+    title = "Force Theme (from Star Wars, Episode IV: A New Hope)"
+    composer = "John Williams"
+  }
+
+  \score {
+    \midi { \tempo 4 = 100 }
+    \layout {
+      indent = #indent
+    }
+    \relative c'' {
+      \magnifyStaff #staff-scale
+      \set fontSize = #note-size
+      \override Score.BarNumber.break-visibility = #break-visibility
+
+      \numericTimeSignature
+      \time 4/4
+      \clef treble
+      \key d \minor
+
+      r2. d,4 |
+      g2 a4. bes16 c |
+      bes2 d, \break |
+      g4. a8 bes d, \tuplet 3/2 {bes' g d'} |
+      c1 \bar "|." |
+    }
+  }
+
 }
