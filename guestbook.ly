@@ -6,7 +6,7 @@
 %% musical notes forming melodies that we like.
 %%
 %% This file is designed to be post-processed with Inkscape, but only to edit
-%% out the centers of the notes.
+%% out the centers of the quarter/eighth notes and font style.
 \version "2.19.82"
 
 \paper {
